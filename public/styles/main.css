@@ -286,3 +286,81 @@ a.close-overlay.hidden  {
   -o-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
 }
+
+/*Blog*/
+.news-block {
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.inner-pad {
+  padding: 120px;
+}
+
+.news-block-02{
+    background-image: url('../images/bg3.jpeg');
+}
+
+.news-block-02.show-img{
+    background-image: url('../images/imgBack.jpeg');
+}
+
+.color-bg {
+  background: #d82546;
+}
+
+.offwhite-bg {
+  background: #f9f9f9;
+}
+
+/*input*/
+input {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid !important;
+  border-radius: 0px !important;
+  box-shadow: none !important;
+  color: #000 !important;
+  font-size: 14px !important;
+  font-weight: 300 !important;
+  line-height: 25px !important;
+  height: 50px !important;
+  margin-bottom: 10px !important;
+  padding: 10px !important;
+  width: 100%;
+  -webkit-transition: all .8s linear;
+  -moz-transition: all .8s linear;
+  -ms-transition: all .8s linear;
+  -o-transition: all .8s linear;
+  transition: all .8s linear;
+}
+
+.color-black{
+    color:#000000;
+}
+
+a .blog{
+    color:black;
+}
+
+.top-bottom{
+    padding: 50px 0 50px 0;
+}
+
+.color-blue{
+    background:#CEDEF9;
+}
+.footlogo{
+    background-image:url('../images/stemcaribbeanx100.png');
+    background-repeat: no-repeat;
+    height:100px;
+}
+
+.mastfoot {
+  padding: 40px 0;
+}
+
+.bottom{
+    padding: 25px 0;
+}

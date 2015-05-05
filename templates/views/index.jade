@@ -9,3 +9,64 @@ block content
 							.valign.intro-caption
 								h1.font1.white Science Technology Engineering Mathematics
 								a.btn.btn-nexus.btn-nexus-white.font2(href="/blog") Latest News
+	section.offwhite-bg.top-bottom.text-center
+			.container
+				.row
+					.col-md-3
+						h2 Science
+						h5 No single definition can completely explain what science is. 
+							Science is quite extensive. Everyone may have different pictures....
+						a.btn.btn-nexus-small.btn-nexus-color.font2(href="/partials/science") Learn More
+					.col-md-3
+						h2 Technology
+						h5 Sometimes it's easier to simplu pull out your iPad or android device
+							and read your favorite books via the kindle app while traveling....
+						a.btn.btn-nexus-small.btn-nexus-color.font2(href="/partials/technology") Learn More
+					.col-md-3
+						h2 Engineering
+						h5 You've probably heard your science teacher mention that to be an engineer
+							you would have to have good problem-solving and logical skills.
+						a.btn.btn-nexus-small.btn-nexus-color.font2(href="/partials/engineering") Learn More 
+					.col-md-3
+						h2 Mathematics
+						h5 Having difficulty with solving that algebraic term? Have no fear,
+							many have walked that same road! But it's no use treating.....
+						a.btn.btn-nexus-small.btn-nexus-color.font2(href="/partials/mathematics") Learn More
+	section#news.pagehead.intro-01.parallax(style="background-position: 50%, -2199px;")
+			.row
+				article.white-bg.text-center.col-md-12
+					.inner-pad
+						h1.font2.black News
+						h6.font4.color Latest News
+		section
+			.container
+				.row
+					if posts.length
+						each post, i in posts
+							if i === 0
+								article.col-md-6.nopadding.news-block.news-block-02.text-left.color-blue
+									.news-block-inner.inner-pad
+										h3= post.title 
+										h6.font4.black Posted 
+											if post.publishedDate
+												| on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+										a.btn.btn-nexus-color.btn-nexus-small.white.font2(href="#") Read more
+							else
+								article.col-md-6.nopadding.news-block.news-block-02.text-left.offwhite-bg
+									.news-block-inner.inner-pad
+										h3= post.title 
+										h6.font4.black Posted  
+											if post.publishedDate
+												| on #{post._.publishedDate.format('MMMM Do, YYYY')} 
+										a.btn.btn-nexus-color.btn-nexus-small.white.font2(href="#") Read more 
+
+
+		section.text-center.top-bottom
+			.container
+					.row
+						article.col-md-8.col-md-offset-2.inner-pad
+							h3 Want to receive updates from Stem Caribbean?
+							h5 Register for our mailing list
+							input#id(type="text", placeholder="Name", size="50").border-form.font1
+							input(type="email", placeholder="Email")
+							a.btn.btn-nexus.btn-nexus-color.font2(href="#") Register
