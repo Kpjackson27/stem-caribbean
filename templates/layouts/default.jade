@@ -15,6 +15,9 @@ html
 		//- Customise the stylesheet for your site by editing /public/styles/site.less
 		//- All .less files will be automatically compiled and minified in production.
 		link(href="/styles/site.min.css", rel="stylesheet")
+		link(href="/styles/nav.css", rel="stylesheet")
+		link(href="/styles/parallax.css", rel="stylesheet")
+		link(href="/styles/main.css", rel="stylesheet")
 
 		//- This file provides the default styling for the KeystoneJS Content Editor
 		if user && user.canAccessKeystone
@@ -37,31 +40,15 @@ html
 	body
 
 		//- HEADER
-		#header: .container
-
-			//- Customise your site's navigation by changing the navLinks Array in ./routes/middleware.js
-			//- ... or completely change this header to suit your design.
-
-			div(role="navigation").navbar.navbar-default
-				.container-fluid
-					.navbar-header
-						button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
-							span.sr-only Toggle navigation
-							span.icon-bar
-							span.icon-bar
-							span.icon-bar
-						a.navbar-brand(href='/') stem caribbean
-					.collapse.navbar-collapse
-						ul.nav.navbar-nav.navbar-left
+		.container
+			.cbp-af-header
+				.cbp-af-inner
+					a(href="/").col-xs-3.logo
+					nav
+						ul.nav
 							each link in navLinks
-								li(class=(section == link.key ? 'active' : null)): a(href=link.href)= link.label
-						ul.nav.navbar-nav.navbar-right
-							if user
-								if user.canAccessKeystone
-									li: a(href='/keystone') Open Keystone
-								li: a(href='/keystone/signout') Sign Out
-							else
-								li: a(href='/keystone/signin') Sign In
+								a(href=link.href)= link.label
+
 
 		//- BODY
 		#body
@@ -82,10 +69,9 @@ html
 
 
 		//- FOOTER
-		.container: #footer
+		
 
-			//- You don't _have_ to include a link saying your site is powered by KeystoneJS, but we appreciate it!
-			p Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.
+			
 
 
 		//- JAVASCRIPT
